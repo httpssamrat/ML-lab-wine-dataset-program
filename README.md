@@ -20,3 +20,46 @@ A complete machine learning lab implementation based on the UCI Wine Dataset.
 git clone https://github.com/httpssamrat/wine-ml-lab.git
 cd wine-ml-lab
 bash setup.sh
+# Data Loading
+pd.read_csv()
+
+# Data Cleaning
+df.isnull()
+df.fillna()
+df.astype()
+df.rename()
+
+# Visualization
+sns.pairplot()
+plt.hist()
+plt.scatter()
+plt.boxplot()
+
+# ML
+train_test_split()
+StandardScaler()
+fit()
+predict()
+
+# Metrics
+accuracy_score()
+confusion_matrix()
+classification_report()
+
+# Hyperparameter tuning
+GridSearchCV()
+
+# Clustering
+KMeans()
+AgglomerativeClustering()
+
+# NLP
+tokenize()
+stopwords()
+stemming()
+lemmatization()
+TfidfVectorizer()
+
+# Deep Learning
+MLPClassifier()
+TensorFlow CNN
