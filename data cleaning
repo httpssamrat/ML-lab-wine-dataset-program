@@ -1,0 +1,36 @@
+import pandas as pd
+import numpy as np
+
+COLUMNS = [
+    'Class','Alcohol','Malic_Acid','Ash','Alcalinity_of_Ash',
+    'Magnesium','Total_Phenols','Flavanoids','Nonflavanoid_Phenols',
+    'Proanthocyanins','Color_Intensity','Hue','OD280_OD315','Proline'
+]
+
+def load_data(path):
+    return pd.read_csv(path, header=None, names=COLUMNS)
+
+def clean_data(df):
+    # Check nulls
+    print("Missing values:\n", df.isnull().sum())
+
+    # Handle missing values (mean imputation)
+    df.fillna(df.mean(numeric_only=True), inplace=True)
+
+    # Type conversion
+    df['Magnesium'] = df['Magnesium'].astype(float)
+
+    # Rename column
+    df.rename(columns={'Class': 'Wine_Class'}, inplace=True)
+
+    return df
+
+def save_cleaned(df, path):
+    df.to_csv(path, index=False)
+
+
+if __name__ == "__main__":
+    df = load_data("data/raw/wine.data")
+    df = clean_data(df)
+    save_cleaned(df, "data/processed/wine_clean.csv")
+    print("Data cleaned and saved")
