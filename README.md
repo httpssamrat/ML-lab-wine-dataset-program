@@ -11,7 +11,8 @@ A complete machine learning lab implementation based on the UCI Wine Dataset.
 - ANN & CNN
 - NLP preprocessing
 - Generative AI experiments
-
+- vUCI Wine Recognition Dataset
+178 samples, 13 features, 3 classes
 ---
 
 ## ⚙️ Setup
