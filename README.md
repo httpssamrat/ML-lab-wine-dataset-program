@@ -17,3 +17,6 @@ A complete machine learning lab implementation based on the UCI Wine Dataset.
 ## ⚙️ Setup
 
 ```bash
+git clone https://github.com/httpssamrat/wine-ml-lab.git
+cd wine-ml-lab
+bash setup.sh
